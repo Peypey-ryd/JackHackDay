@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>California Airport Efficiency Policy | Gemini Hoya Hacks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">California Airport Efficiency</h1>
+      <p class="tagline">Policy recommendations powered by California airport data & Gemini</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section policy-section">
+      <div class="container">
+        <h2 class="section-title">Generated Policy Recommendation</h2>
+        <p class="section-desc">Run <code>GeminiHoyaHack.py</code> to generate a policy; it saves to <code>policy_output.txt</code>. Paste the output below, or serve this folder over HTTP (e.g. <code>python -m http.server 8000</code>) to load it automatically.</p>
+        <div class="policy-card" id="policy-output">
+          <div class="policy-placeholder" id="policy-placeholder">
+            <p>Policy text will appear here.</p>
+            <p>To generate: run <code>python GeminiHoyaHack.py</code> in your terminal, then copy the printed policy and paste it into this box (or we can load it from a file).</p>
+          </div>
+          <div class="policy-content hidden" id="policy-content"></div>
+        </div>
+        <div class="policy-actions">
+          <button type="button" class="btn btn-primary" id="paste-btn">Paste policy text</button>
+          <button type="button" class="btn btn-secondary" id="clear-btn">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section data-section">
+      <div class="container">
+        <h2 class="section-title">California Airport Data Summary</h2>
+        <p class="section-desc">Key metrics from <code>California_Data.csv</code> (Fiscal Year 2024).</p>
+        <div class="stats-grid" id="stats-grid"></div>
+        <div class="table-wrap">
+          <table class="data-table" id="data-table">
+            <thead>
+              <tr>
+                <th>Entity</th>
+                <th>Fiscal Year</th>
+                <th>Total Operating Revenues</th>
+                <th>Total Operating Expenses</th>
+                <th>Operating Income (Loss)</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Gemini Hoya Hacks — California Airport Efficiency Policy</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
